@@ -84,11 +84,6 @@ class DatabaseHelper {
     );
   }
 
-  Future<int> deleteAllQuotes() async {
-    final db = await database;
-    return await db.delete('quotes');
-  }
-
   Future close() async {
     final db = await instance.database;
     db.close();
